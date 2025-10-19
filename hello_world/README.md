@@ -1,4 +1,4 @@
 # Git Intro Project
 
 j'ai utiliser #!/bin/bash
-commande pour compiler gcc -E $CFILE -o c
+commande pour compiler gcc -c $CFILE
