@@ -1,4 +1,4 @@
 # Git Intro Project
 
 j'ai utiliser #!/bin/bash
-commande pour compiler gcc -S $CFILE
+commande pour compiler gcc $CFILE -o cisfum 
