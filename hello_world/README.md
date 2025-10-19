@@ -1,4 +1,10 @@
 # Git Intro Project
 
-j'ai utiliser #!/bin/bash
-commande pour compiler gcc $CFILE -o cisfun
+// #include <stdio> // bibliotheque
+
+int main(void) // envoie void qui veut dire renvoie rien .
+{
+        puts("Programming is like building a multilingual puzzle"); // fonction qui prend en argument une chaine de caracteres
+
+        return (0); // qui retourne rien .
+}
