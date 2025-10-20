@@ -9,27 +9,25 @@
  */
 int main(void)
 {
-    int n;
-    int last_digit;
-
-    srand(time(0));
-    n = rand() - RAND_MAX / 2;
-    last_digit = abs(n) % 10;
-
-    printf("Le dernier chiffre de %d est %d", n, last_digit);
-
-    if (last_digit > 5)
-    {
-        printf(" et est supérieur à 5\n");
-    }
-    else if (last_digit == 0)
-    {
-        printf(" et est égal à 0\n");
-    }
-    else
-    {
-        printf(" et est inférieur à 6 et différent de 0\n");
-    }
-
-    return (0);
+	int n;
+	int last_digit;
+	
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	last_digit = abs(n) % 10;
+	
+	printf("Le dernier chiffre de %d est %d", n, last_digit);
+	if (last_digit > 5)
+	{
+		printf(" et est supérieur à 5\n");
+	}
+	else if (last_digit == 0)
+	{
+		printf(" et est égal à 0\n");
+	}
+	else
+	{
+		printf(" et est inférieur à 6 et différent de 0\n");
+	}
+	return (0);
 }
