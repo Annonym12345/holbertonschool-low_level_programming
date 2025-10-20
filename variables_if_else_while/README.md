@@ -1,31 +1,42 @@
 # Git Intro Project
 
-// #include <.......h>
-// #include <......h>
-// #include <.....h>
+  Description : Ce code génère un nombre aléatoire,
+  calcule son dernier chiffre, et imprime une phrase
+  qui vas avec le chiffre.
+
+//#include <......h>
+//#include <....h>
+//#include <.....h>
 
 /**
-  main - Entry point
+ *main - Point d'entrée du programme
  *
-  Return: Always 0 (Success)
+ *
+  Return: Toujours 0 (Succès)
  */
 int main(void)
 {
         int n;
+        int chiffre_final;
 
         srand(time(0));
-        n = rand() - RAND-MAX / 2;
+        n = rand();
+        chiffre_final = n % 10;
 
-        if (n > 0)
+        printf("Le dernier chiffre de %d est %d", n, chiffre_final);
+
+        if (chiffre_final > 5)
         {
-                printf(%d, "is positive\n", n);
+                printf("est supérieur à 5\n");
         }
-        else if (n < 0)
+        else if (chiffre_final == 0)
         {
-                printf(%d, "is negative\n", n);
+                printf("et est égal à 0\n");
         }
         else
-                printf(%d, "is zero\n", n);
+        {
+                printf("est inférieur à 6 et différent de 0\n");
+        }
 
         return (0);
 }
