@@ -1,38 +1,34 @@
 #include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
+#include <time.h>
 
 /**
- * main - Point d'entrée du programme
+ * main - Entry point
  *
- * Description : Ce code génère un nombre aléatoire,
- * calcule son dernier chiffre, et imprime une phrase
- * qui vas avec le chiffre.
- *
- * Return: Toujours 0 (Succès)
+ * Return: Always 0 (Successs)
  */
 int main(void)
 {
 	int n;
-	int chiffre_final;
+	int tast_digit;
 
 	srand(time(0));
-	n = rand();
-	chiffre_final = n % 10;
+	n = rand() - RAND_MAX / 2;
+	last_digit = n % 10;
 
-	printf("Le dernier chiffre de %d est %d", n, chiffre_final);
+	printf("le dernier chiffre de %d est %d", n, tast_digit);
 
-	if (chiffre_final > 5)
+	if (last_digit > 5)
 	{
-		printf("est supérieur à 5\n");
+		printf("et est supprieur a 5\n")
 	}
-	else if (chiffre_final == 0)
+	else if (last_digit == 0)
 	{
-		printf("et est égal à 0\n");
+		printf("et est egal a 0\n")
 	}
 	else
 	{
-		printf("est inférieur à 6 et différent de 0\n");
+		printf("et est inferieur a 6 et different de 0\n");
 	}
 
 	return (0);
