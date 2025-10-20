@@ -7,11 +7,11 @@
   Return: Always 0 (success)
  */
 
-// #include <stdio.h> // bibliotheque
+//#include <stdio.h>
 
-int main(void) // envoie void qui veut dire renvoie rien .
+int main(void)
 {
-        puts("Programming is like building a multilingual puzzle"); // fonction qui prend en argument une chaine de caracteres
+        puts("\"Programming is like building a multilingual puzzle"); // fonction qui prend en argument une chaine de caracteres
 
-        return (0); // qui retourne rien .
+        return (0);
 }
