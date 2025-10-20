@@ -3,36 +3,33 @@
 #include <stdio.h>
 
 /**
+ * main - Point d'entrée du programme
  *
- * main - Point d'entrée
- *
- * Description : Ce code génère un nombre aléatoire,
- * calcule son dernier chiffre, et imprime une phrase
- * qui vas avec le chiffre.
- *
- * Return: Toujours 0 (Succès)
+ * Retourne : Toujours 0 (succès)
  */
- int main(void)
- {
+int main(void)
+{
     int n;
-    int last_digit;
-    
+    int dernier_chiffre;
+
     srand(time(0));
     n = rand() - RAND_MAX / 2;
-    last_digit = abs(n) % 10;
-    
-    printf("Le dernier chiffre de %d est %d", n, last_digit);
-    if (last_digit > 5)
+    dernier_chiffre = n % 10;
+
+    printf("Dernier chiffre de %d est %d ", n, dernier_chiffre);
+
+    if (dernier_chiffre > 5)
     {
-        printf(" et est supérieur a 5\n");
+        printf("et est supérieu à 5\n");
     }
-    else if (last_digit == 0)
+    else if (dernier_chiffre == 0)
     {
-        printf(" et est égal a 0\n");
+        printf("et est égalà 0\n");
     }
     else
     {
-        printf(" et est inférieur a 6 et différent de 0\n");
+        printf("et est inférieurà 6 et différent de 0\n");
     }
-    return (0);
+
+    return 0;
 }

@@ -4,39 +4,38 @@
   calcule son dernier chiffre, et imprime une phrase
   qui vas avec le chiffre.
 
-//#include <......h>
-//#include <....h>
-//#include <.....h>
+// #include <.....h>
+// #include <.....h>
+// #include <....h>
 
 /**
- *main - Point d'entrée du programme
+ ** main - Point d'entrée du programme
  *
- *
-  Return: Toujours 0 (Succès)
+ ** Retourne : Toujours 0 (succès)
  */
 int main(void)
 {
-        int n;
-        int chiffre_final;
+    int n;
+    int dernier_chiffre;
 
-        srand(time(0));
-        n = rand();
-        chiffre_final = n % 10;
+    srand(time(0));
+    n = rand() - RAND_MAX / 2;
+    dernier_chiffre = n % 10;
 
-        printf("Le dernier chiffre de %d est %d", n, chiffre_final);
+    printf("Dernier chiffre de %d est %d ", n, dernier_chiffre);
 
-        if (chiffre_final > 5)
-        {
-                printf("est supérieur à 5\n");
-        }
-        else if (chiffre_final == 0)
-        {
-                printf("et est égal à 0\n");
-        }
-        else
-        {
-                printf("est inférieur à 6 et différent de 0\n");
-        }
+    if (dernier_chiffre > 5)
+    {
+        printf("et est supérieur à 5\n");
+    }
+    else if (dernier_chiffre == 0)
+    {
+        printf("et est égal à 0\n");
+    }
+    else
+    {
+        printf("et est inférieur à 6 et différent de 0\n");
+    }
 
-        return (0);
+    return 0;
 }
