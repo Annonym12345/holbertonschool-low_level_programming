@@ -5,6 +5,10 @@
 /**
  * main - Point d'entrée
  *
+ *  Description : Ce code génère un nombre aléatoire,
+ *  calcule son dernier chiffre, et imprime une phrase
+ *  qui vas avec le chiffre.
+ *
  * Return: Toujours 0 (Succès)
  */
 int main(void)
