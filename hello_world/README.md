@@ -1,6 +1,6 @@
 # Git Intro Project
 
-// #include <stdio> // bibliotheque
+// #include <stdio.h> // bibliotheque
 
 int main(void) // envoie void qui veut dire renvoie rien .
 {
