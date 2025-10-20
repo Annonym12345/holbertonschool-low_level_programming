@@ -1,8 +1,8 @@
 # Git Intro Project
 
-//#include <stdio.h>
-//#include <stdlib.h>
-//#include <time.h>
+// #include <.......h>
+// #include <......h>
+// #include <.....h>
 
 /**
   main - Entry point
@@ -29,4 +29,3 @@ int main(void)
 
         return (0);
 }
-
