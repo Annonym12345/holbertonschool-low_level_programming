@@ -11,7 +11,7 @@
 
 int main(void)
 {
-        puts("\"Programming is like building a multilingual puzzle"); // fonction qui prend en argument une chaine de caracteres
+        printf("......"); // FONCTION pour imprimer .
 
         return (0);
 }
