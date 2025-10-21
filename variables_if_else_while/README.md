@@ -9,17 +9,6 @@
  */
 int main(void)
 {
-        char a;
-
-        a = 97;
-        while (a >= 'a' && a <= 'z')
-        {
-                if (a != 'q' && a != 'e')
-                {
-                        putchar(a);
-                }
-                a++;
-        }
-        putchar(10);
+        write(1, "0123456789\n", 11);
         return (0);
 }
