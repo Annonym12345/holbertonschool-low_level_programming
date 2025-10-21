@@ -1,10 +1,6 @@
 # Git Intro Project
 
-  Description : Ce code génère un nombre aléatoire,
-  calcule son dernier chiffre, et imprime une phrase
-  qui vas avec le chiffre.
-
-// #include <......h>
+// #include <....h>
 
 /**
  ** main - Entry point
@@ -14,19 +10,15 @@
 int main(void)
 {
         char a;
-        char c;
 
         a = 97;
-        c = 65;
         while (a >= 'a' && a <= 'z')
         {
-                putchar(a);
+                if (a != 'q' && a != 'e')
+                {
+                        putchar(a);
+                }
                 a++;
-        }
-        while (c >= 'A' && c <= 'Z')
-        {
-                putchar(c);
-                c++;
         }
         putchar(10);
         return (0);
