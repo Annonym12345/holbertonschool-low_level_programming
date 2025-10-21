@@ -1,6 +1,6 @@
 # Git Intro Project
 
-// #include <....h>
+#include <stdio.h>
 
 /**
  ** main - Entry point
@@ -9,6 +9,14 @@
  */
 int main(void)
 {
-        write(1, "0123456789\n", 11);
+        char c;
+
+        c = 48;
+        while (c >= '0' && c <= '9')
+        {
+                putchar(c);
+                c++;
+        }
+        putchar(10);
         return (0);
 }
