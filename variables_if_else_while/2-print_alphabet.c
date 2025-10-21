@@ -10,7 +10,7 @@ int main(void)
 	char c;
 
 	c = 97;
-	while(c >= 'a' && c <= 'z')
+	while (c >= 'a' && c <= 'z')
 	{
 		putchar(c);
 		c++;
