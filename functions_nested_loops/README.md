@@ -4,6 +4,13 @@ faire un fichier .h avec la fonction.
 et du coup mettre #include <..nom...h>
 et git add ect...
 
+// #include "main.h"
+
+/**
+ ** main - check the code
+ *
+ ** Return: Always 0.
+ */
 void print_alphabet(void)
 {
         char c;
@@ -15,5 +22,4 @@ void print_alphabet(void)
                 c++;
         }
         putchar(10);
-        return (0);
 }
