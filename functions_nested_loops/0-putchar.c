@@ -1,12 +1,17 @@
-#include <main.h>
-#include <unistd.h>
+#include "main.h"
 
 /**
- * main - Entry point
+ * main - putchar "main.h"
  *
- * Return: on 1 success
+ * Return: Always 0.
  */
-int _putchar(char c)
+int main(void)
 {
-	return (write(1, &c, 1));
+	_putchar('m');
+	_putchar('a');
+	_putchar('i');
+	_putchar('n');
+	_putchar('\n');
+
+	return (0);
 }
