@@ -1,9 +1,10 @@
-# Git Intro Project
+#include "main.h"
 
-faire un fichier .h avec la fonction.
-et du coup mettre #include <..nom...h>
-et git add ect...
-
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
 void print_alphabet(void)
 {
         char c;
@@ -14,6 +15,5 @@ void print_alphabet(void)
                 putchar(c);
                 c++;
         }
-        putchar(10);
-        return (0);
+        putchar('\n');
 }
