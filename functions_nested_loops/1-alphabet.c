@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * main - check the code
@@ -7,13 +8,13 @@
  */
 void print_alphabet(void)
 {
-        char c;
+	char c;
 
-        c = 97;
-        while (c >= 'a' && c <= 'z')
-        {
-                putchar(c);
-                c++;
-        }
-        putchar(10);
+	c = 97;
+	while (c >= 'a' && c <= 'z')
+	{
+		_putchar(c);
+		c++;
+	}
+	_putchar(10);
 }

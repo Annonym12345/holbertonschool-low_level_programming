@@ -4,7 +4,7 @@
 /**
  * Fichier: main.h
  *
- * Fonction: toute les fonction
+ * Fonction: toute les fonction(prototype)
  */
 
 int _putchar(char c);
