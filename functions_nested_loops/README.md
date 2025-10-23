@@ -8,7 +8,7 @@ et git add ect...
 
 /**
  ** main - check the code
- *
+ **
  ** Return: Always 0.
  */
 void print_alphabet(void)
