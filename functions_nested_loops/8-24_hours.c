@@ -1,14 +1,8 @@
-# Git Intro Project
-
-faire un fichier .h avec la fonction.
-et du coup mettre #include <..nom...h>
-et git add ect...
-
 #include "holberton.h"
 
 /**
- ** jack_bauer - Prints every minute of the day of
- **              Jack Bauer, starting from 00:00 to 23:59.
+ * jack_bauer - Prints every minute of the day of
+ *              Jack Bauer, starting from 00:00 to 23:59.
  */
 void jack_bauer(void)
 {
