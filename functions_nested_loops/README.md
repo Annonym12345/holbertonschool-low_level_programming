@@ -7,25 +7,15 @@ et git add ect...
 // #include "main.h"
 
 /**
- ** print_sign - Prints the sign of a number.
+ ** _abs - Computes the absolute value of an integer.
+ ** @n: The integer to be computed.
  *
- ** Return: 1 if the numero
+ ** Return: The absolute value of the integer.
  */
-int print_sign(int n)
+int _abs(int n)
 {
-        if (n > 0)
-        {
-                _putchar('+');
-                return (1);
-        }
-        else if (n == 0)
-        {
-                _putchar('0');
-                return (0);
-        }
+        if (n >= 0)
+                return (n);
         else
-        {
-                _putchar('-');
-                return (-1);
-        }
+                return (-n);
 }
