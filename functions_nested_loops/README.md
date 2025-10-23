@@ -7,19 +7,16 @@ et git add ect...
 // #include "main.h"
 
 /**
- ** main - check the code
- **
- ** Return: Always 0.
+ ** _isalpha - Checks if a character is alphabetic.
+ ** @c: The character to be checked.
+ *
+ ** Return: 1 if character is letter, lowercase or uppercase, 0 otherwise.
  */
-void print_alphabet(void)
+int _isalpha(int c)
 {
-        char c;
-
-        c = 97;
-        while (c >= 'a' && c <= 'z')
-        {
-                putchar(c);
-                c++;
-        }
-        putchar('\n');
+        if ((c >= 'a' && c <= 'z') ||
+            (c >= 'A' && c <= 'Z'))
+                return (1);
+        else
+                return (0);
 }
