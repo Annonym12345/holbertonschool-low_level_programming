@@ -3,16 +3,13 @@
 // #include "main.h"
 
 /**
- ** _isupper - Checks for uppercase characters.
- ** @c: The character to be checked.
+ ** mul - Multiples two integers.
+ ** @a: The first integer to be multiplied.
+ ** @b: The second integer to be multiplied.
  *
- ** Return: 1 if character is uppercase, 0 otherwise.
+ ** Return: The result of the multiplication.
  */
-int _isdigit(int c)
+int mul(int a, int b)
 {
-        if (c >= '0' && c <= '9')
-                return (1);
-
-        else
-                return (0);
+	return (a * b);
 }
