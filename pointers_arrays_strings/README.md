@@ -3,18 +3,33 @@
 //#include "main.h"
 
 /**
- ** puts2 - Prints one char out of two of a string.
- ** @str: The string containing characters.
+ ** _atoi - Converts a string to an integer.
+ ** @s: The string to be converted.
+ *
+ ** Return: The integer value of the converted string.
  */
-void puts2(char *str)
+int _atoi(char *s)
 {
-	int index = 0, len = 0;
+        int     nb;
+        int     space;
 
-	while (str[index++])
-		len++;
+        space = 1;
+        nb = 0;
+        while (*s == ' ' || (*s >= 9 && *s <= 13))
+        {
+                s++;
+        }
+        while (*s == '-' || *s == '+')
+        {
+                if (*s == '-')
+                        space = -space;
+                s++;
+        }
+        while (*s != '\0' && *s >= '0' && *s <= '9')
+        {
 
-	for (index = 0; index < len; index += 2)
-		_putchar(str[index]);
-
-	_putchar('\n');
+                nb = nb * 10 + (*s - '0');
+                s++;
+        }
+        return ((nb) * space);
 }
