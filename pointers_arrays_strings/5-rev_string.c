@@ -1,18 +1,19 @@
-# Git Intro Project
-
-//#include "main.h"
+#include "main.h"
 
 /**
- ** rev_string - Reverses a string.
- ** @s: The string to be reversed.
+ * rev_string - Reverses a string.
+ * @s: The string to be reversed.
  */
 void rev_string(char *s)
 {
-	int len; 
+	int len;
 	int i;
 	char tmp;
 
-	while (s[i])
+	len = 0;
+	i = 0;
+	tmp = 0;
+	while (s[i++])
 		len++;
 
 	for (i = len - 1; i >= len / 2; i--)
