@@ -1,10 +1,8 @@
-# Git Intro Project
-
-//#include "main.h"
+#include "main.h"
 
 /**
- ** print_rev - Prints a string in reverse.
- ** @s: The string to be printed.
+ * print_rev - Prints a string in reverse.
+ * @s: The string to be printed.
  */
 void print_rev(char *s)
 {
@@ -12,8 +10,7 @@ void print_rev(char *s)
 	int i;
 
 	len = 0;
-	index = 0;
-
+	i = 0;
 	while (s[i++])
 		len++;
 
