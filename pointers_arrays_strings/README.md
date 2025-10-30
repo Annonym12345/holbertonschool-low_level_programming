@@ -3,29 +3,24 @@
 //#include "main.h"
 
 /**
- ** _atoi - Converts a string to an integer.
- ** @s: The string to be converted.
- *
- ** Return: The integer value of the converted string.
+ ** puts_half - Prints half of a string.
+ ** @str: The string to be printed.
  */
-int _atoi(char *s)
+void puts_half(char *str)
 {
-	int nb;
-	unsigned int num;
+	int index = 0, len = 0, n;
 
-	nb = 1;
-	num = 0;
-	do {
-		if (*s == '-')
-			nb *= -1;
+	while (str[index++])
+		len++;
 
-		else if (*s >= '0' && *s <= '9')
-			num = (num * 10) + (*s - '0');
+	if ((len % 2) == 0)
+		n = len / 2;
 
-		else if (num > 0)
-			break;
+	else
+		n = (len + 1) / 2;
 
-	} while (*s++);
+	for (index = n; index < len; index++)
+		_putchar(str[index]);
 
-	return (num * nb);
+	_putchar('\n');
 }
