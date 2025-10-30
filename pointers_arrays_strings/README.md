@@ -1,26 +1,27 @@
 # Git Intro Project
 
-//#include "main.h"
+//#include "main.h
+//#include <......h>
 
 /**
- ** puts_half - Prints half of a string.
- ** @str: The string to be printed.
+ ** print_array - Prints an inputted number of elements
+ **               of an array of integers.
+ ** @a: The array of integers.
+ ** @n: The number of elements to be printed.
  */
-void puts_half(char *str)
+void print_array(int *a, int n)
 {
-	int index = 0, len = 0, n;
+	int index;
 
-	while (str[index++])
-		len++;
+	for (index = 0; index < n; index++)
+	{
+		printf("%d", a[index]);
 
-	if ((len % 2) == 0)
-		n = len / 2;
+		if (index == n - 1)
+			continue;
 
-	else
-		n = (len + 1) / 2;
+		printf(", ");
+	}
 
-	for (index = n; index < len; index++)
-		_putchar(str[index]);
-
-	_putchar('\n');
+	printf("\n");
 }
