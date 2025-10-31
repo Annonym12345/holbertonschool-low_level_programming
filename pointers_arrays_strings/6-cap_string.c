@@ -1,4 +1,6 @@
 #include "main.h"
+#include <ctype.h>
+#include <string.h>
 
 /**
  * cap_string - Capitalizes all words of a string.
@@ -6,34 +8,24 @@
  *
  * Return: A pointer to the changed string.
  */
-char *cap_string(char *str)
+char *cap_string(char *s)
 {
-	int i;
+	const char *seps = " \t\n,;.!?\"(){}";
+	size_t i;
 
-	i = 0;
-	while (str[i])
+	if (s == NULL)
+		return (NULL);
+
+	if (s[0] != '\0' && islower((unsigned char)s[0]))
+		s[0] = (char)toupper((unsigned char)s[0]);
+
+	for (i = 1; s[i] != '\0'; i++)
 	{
-		while (!(str[i] >= 'a' && str[i] <= 'z'))
-			i++;
+		if (isupper((unsigned char)s[i]))
+			s[i] = (char)tolower((unsigned char)s[i]);
 
-		if (str[i - 1] == ' ' ||
-		    str[i - 1] == '\t' ||
-		    str[i - 1] == '\n' ||
-		    str[i - 1] == ',' ||
-		    str[i - 1] == ';' ||
-		    str[i - 1] == '.' ||
-		    str[i - 1] == '!' ||
-		    str[i - 1] == '?' ||
-		    str[i - 1] == '"' ||
-		    str[i - 1] == '(' ||
-		    str[i - 1] == ')' ||
-		    str[i - 1] == '{' ||
-		    str[i - 1] == '}' ||
-		    i == 0)
-			str[i] -= 32;
-
-		i++;
+		if (strchr(seps, s[i - 1]) && isalpha((unsigned char)s[i]))
+			s[i] = (char)toupper((unsigned char)s[i]);
 	}
-
-	return (str);
+	return (s);
 }
