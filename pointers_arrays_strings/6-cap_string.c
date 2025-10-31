@@ -1,31 +1,40 @@
 #include "main.h"
 #include <ctype.h>
-#include <string.h>
+#include <stddef.h>
 
 /**
- * cap_string - Capitalizes all words of a string.
- * @str: The string to be capitalized.
- *
- * Return: A pointer to the changed string.
- */
+* cap_string - Capitalizes all words of a string.
+* @str: The string to be capitalized.
+*
+* Return: A pointer to the changed string.
+*/
 char *cap_string(char *s)
 {
-	const char *seps = " \t\n,;.!?\"(){}";
-	size_t i;
+	int i;
+	int capitalize_next = 1;
 
 	if (s == NULL)
 		return (NULL);
 
-	if (s[0] != '\0' && islower((unsigned char)s[0]))
-		s[0] = (char)toupper((unsigned char)s[0]);
-
-	for (i = 1; s[i] != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (isupper((unsigned char)s[i]))
-			s[i] = (char)tolower((unsigned char)s[i]);
-
-		if (strchr(seps, s[i - 1]) && isalpha((unsigned char)s[i]))
-			s[i] = (char)toupper((unsigned char)s[i]);
+		if (capitalize_next && islower(s[i]))
+		{
+			s[i] = (char)toupper(s[i]);
+			capitalize_next = 0;
+		}
+		else if (isupper(s[i]) && !capitalize_next)
+		{
+			capitalize_next = 0;
+		}
+		else if (!isalpha(s[i]))
+		{
+			capitalize_next = 1;
+		}
+		else
+		{
+			capitalize_next = 0;
+		}
 	}
 	return (s);
 }
