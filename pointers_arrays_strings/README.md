@@ -1,24 +1,14 @@
 # Git Intro Project
 
 // #include "main.h"
-
-/**
- ** _strchr - Locates a character in a string.
+                                                                                                                     /**                                                                                                                   * _strspn - Gets the length of a prefix substring.
  ** @s: The string to be searched.
- ** @c: The character to be located.
- *
- ** Return: If c is found - a pointer to the first occurence.
- **         If c is not found - NULL.
- */
-char *_strchr(char *s, char c)
-{
-        int i;
-
-        for (i = 0; s[i] >= '\0'; i++)
-        {
-                if (s[i] == c)
-                        return (s + i);
-        }
-
-        return ('\0');
+ ** @accept: The prefix to be measured.                                                                                *                                                                                                                    * Return: The number of bytes in s which
+ **         consist only of bytes from accept.
+ */                                                                                                                  unsigned int _strspn(char *s, char *accept)
+{                                                                                                                            unsigned int b = 0;
+        int i;                                                                                                                                                                                                                                    while (*s)                                                                                                           {                                                                                                                            for (i = 0; accept[i]; i++)
+                {                                                                                                                            if (*s == accept[i])
+                        {                                                                                                                            b++;                                                                                                                 break;                                                                                                       }                                                                                                                                                                                                                                         else if (accept[i + 1] == '\0')
+                                return (b);                                                                                          }                                                                                                                                                                                                                                         s++;                                                                                                         }                                                                                                                                                                                                                                         return (b);
 }
