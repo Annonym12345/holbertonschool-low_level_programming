@@ -4,29 +4,17 @@
 // #include <.....h>
 
 /**
- ** create_array - Creates an array of chars and
- **                initializes it with a specific char.
- ** @size: The size of the array to be initialized.
- ** @c: The specific char to intialize the array with.
- *
- ** Return: If size == 0 or the function fails - NULL.
- **         Otherwise - a pointer to the array.
+ ** free_grid - Frees a 2-dimensional array of integers.
+ ** @grid: The 2-dimensional array of integers to be freed.
+ ** @height: The height of grid.
  */
-char *create_array(unsigned int size, char c)
+void free_grid(int **grid, int height)
 {
-        char *array;
-        unsigned int index;
+        int index;
 
-        if (size == 0)
-                return (NULL);
+        for (index = 0; index < height; index++)
+                free(grid[index]);
 
-        array = malloc(sizeof(char) * size);
-
-        if (array == NULL)
-                return (NULL);
-
-        for (index = 0; index < size; index++)
-                array[index] = c;
-
-        return (array);
+        free(grid);
 }
+
