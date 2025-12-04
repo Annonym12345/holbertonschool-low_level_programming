@@ -121,3 +121,85 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
         return (1);
 }
+
+
+
+
+#include "hash_tables.h"
+
+/**
+ * hash_table_get - Retrieve the value associated with
+ *                  a key in a hash table.
+ * @ht: A pointer to the hash table.
+ * @key: The key to get the value of.
+ *
+ * Return: If the key cannot be matched - NULL.
+ *         Otherwise - the value associated with key in ht.
+ */
+char *hash_table_get(const hash_table_t *ht, const char *key)
+{
+        hash_node_t *node;
+        unsigned long int i;
+
+        if (ht == NULL || key == NULL || *key == '\0')
+                return (NULL);
+
+        i = key_index((const unsigned char *)key, ht->size);
+        if (i >= ht->size)
+                return (NULL);
+
+        node = ht->array[i];
+        while (node && strcmp(node->key, key) != 0)
+                node = node->next;
+
+        return ((node == NULL) ? NULL : node->value);
+}
+
+
+
+
+
+
+#include "hash_tables.h"
+
+/**
+ * hash_table_print - Prints a hash table.
+ * @ht: A pointer to the hash table to print.
+ *
+ * Description: Key/value pairs are printed in the order
+ *              they appear in the array of the hash table.
+ */
+void hash_table_print(const hash_table_t *ht)
+{
+        hash_node_t *node;
+        unsigned long int i;
+        unsigned char f = 0;
+
+        if (ht == NULL)
+                return;
+
+        printf("{");
+        for (i = 0; i < ht->size; i++)
+        {
+                if (ht->array[i] != NULL)
+                {
+                        if (f == 1)
+                                printf(", ");
+
+                        node = ht->array[i];
+                        while (node != NULL)
+                        {
+                                printf("'%s': '%s'", node->key, node->value);
+                                node = node->next;
+                                if (node != NULL)
+                                        printf(", ");
+                        }
+                        f = 1;
+                }
+        }
+        printf("}\n");
+}
+
+
+
+
